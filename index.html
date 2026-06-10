@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristina GR | Portafolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://jsdelivr.net" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+
+    <!-- BOTÓN DE TEMA EN NUEVA POSICIÓN: Fijo en la Esquina Superior Derecha -->
+    <button id="theme-toggle" class="btn-theme-fixed shadow-sm" aria-label="Cambiar tema">
+        <i class="bi bi-moon-stars-fill"></i>
+    </button>
+
+    <!-- Menú Flotante Centrado de Navegación -->
+    <div class="nav-floating-container">
+        <nav class="nav-pastel-bar d-flex align-items-center justify-content-center shadow-sm">
+            <a href="#sobre-mi" class="nav-pastel-link"><i class="bi bi-person-fill"></i> <span class="d-none d-sm-inline">Perfil</span></a>
+            <a href="#habilidades" class="nav-pastel-link"><i class="bi bi-cpu-fill"></i> <span class="d-none d-sm-inline">Skills</span></a>
+            <a href="#proyectos" class="nav-pastel-link"><i class="bi bi-code-slash"></i> <span class="d-none d-sm-inline">Proyectos</span></a>
+            <a href="#contacto" class="nav-pastel-link"><i class="bi bi-chat-heart-fill"></i> <span class="d-none d-sm-inline">Contacto</span></a>
+            <a href="docs/mi-cv.pdf" download="CV_CristinaGalvan.pdf" class="nav-pastel-link link-cv-highlight"><i class="bi bi-paperclip"></i> <span class="d-none d-sm-inline">CV</span></a>
+        </nav>
+    </div>
+
+    <!-- Contenedor Principal Centrado -->
+    <main class="container container-centered py-5 mt-5">
+        
+        <!-- SECCIÓN 1: Perfil e Intro -->
+        <header id="sobre-mi" class="text-center mb-5 pt-4">
+            <div class="avatar-wrapper mx-auto mb-4">
+                <img src="img/tu-foto.jpg" alt="Cristina Galván Ramírez" class="profile-avatar" onerror="this.src='https://placeholder.com✨'">
+            </div>
+            <h1 class="display-6 fw-bold mb-2">¡Hola, soy <span class="highlight-text">Cristina Galván Ramírez</span>!</h1>
+            <p class="lead text-muted-custom max-w-sm mx-auto mb-4">
+                Ingeniero de Software enfocado en crear interfaces altamente interactivas, código limpio y estética.
+            </p>
+            
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-3">
+                <a href="https://github.com/Cristina-GalvanR" target="_blank" class="badge-profile bg-lavender-pill"><i class="bi bi-github me-2"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/cristina-galván-ramírez" target="_blank" class="badge-profile bg-pink-pill"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+                <a href="mailto:galvancristinar@gmail.com" class="badge-profile bg-peach-pill"><i class="bi bi-envelope-heart-fill me-2"></i>Contacto</a>
+            </div>
+        </header>
+
+        <hr class="divider my-5">
+
+        <!-- APARTADO CREATIVO 1: Estadísticas Técnicas -->
+        <section class="mb-5 text-center">
+            <div class="row g-3 justify-content-center">
+                <div class="col-4 col-md-3">
+                    <div class="metric-card bg-lavender-pill">
+                        <h3 class="metric-num">+3</h3>
+                        <p class="metric-text">Años Código</p>
+                    </div>
+                </div>
+                <div class="col-4 col-md-3">
+                    <div class="metric-card bg-pink-pill">
+                        <h3 class="metric-num">+40</h3>
+                        <p class="metric-text">Repositorios</p>
+                    </div>
+                </div>
+                <div class="col-4 col-md-3">
+                    <div class="metric-card bg-peach-pill">
+                        <h3 class="metric-num">20K</h3>
+                        <p class="metric-text">Commits</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APARTADO CREATIVO 2: Habilidades Fuertes -->
+        <section id="habilidades" class="mb-5 text-center">
+            <h2 class="h5 fw-bold mb-4"><i class="bi bi-patch-check-fill text-lavender me-2"></i>Stack Tecnológico</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <span class="skill-bubble bg-lavender-pill"><i class="bi bi-browser-chrome me-1"></i> React.js</span>
+                <span class="skill-bubble bg-pink-pill"><i class="bi bi-filetype-js me-1"></i> TypeScript</span>
+                <span class="skill-bubble bg-peach-pill"><i class="bi bi-nut me-1"></i> Node.js</span>
+                <span class="skill-bubble bg-mint-pill"><i class="bi bi-database me-1"></i> PostgreSQL</span>
+                <span class="skill-bubble bg-lavender-pill"><i class="bi bi-git me-1"></i> Git & GitHub</span>
+            </div>
+        </section>
+
+        <hr class="divider my-5">
+
+        <!-- SECCIÓN 3: Carrusel con el NUEVO Diseño de Tarjetas -->
+        <section id="proyectos" class="mb-5 text-center">
+            <h2 class="h4 fw-bold mb-2"><i class="bi bi-stars text-lavender me-2"></i>Proyectos Destacados</h2>
+            <p class="text-muted-custom small mb-4">Explora mis últimos repositorios y desarrollos de software.</p>
+            
+            <div id="proyectosCarousel" class="carousel slide pb-4" data-bs-ride="carousel">
+                <div class="carousel-inner" id="carousel-projects-container">
+                    <!-- JS inyectará las tarjetas automáticamente aquí con el nuevo estilo asimétrico -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#proyectosCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#proyectosCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <hr class="divider my-5">
+
+        <!-- SECCIÓN 4: Formulario Bento Grid -->
+        <section id="contacto" class="mb-4">
+            <div class="text-center mb-4">
+                <h2 class="h4 fw-bold mb-2"><i class="bi bi-envelope-heart-fill text-pink me-2"></i>¿Trabajamos juntos?</h2>
+                <p class="text-muted-custom small max-w-sm mx-auto">Escríbeme un mensaje directo. Los campos reaccionan de forma elástica.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9">
+                    <form id="interactive-form" action="https://formspree.io" method="POST" class="contact-bento-grid p-4 shadow-sm">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 text-start">
+                                <label for="name" class="form-label-custom"><i class="bi bi-person-fill me-1 text-lavender"></i> Tu Nombre</label>
+                                <input type="text" name="name" id="name" class="form-input-pastel input-lavender" required placeholder="Ej: Diana Prince">
+                            </div>
+                            <div class="col-12 col-sm-6 text-start">
+                                <label for="email" class="form-label-custom"><i class="bi bi-envelope-open-fill me-1 text-peach"></i> Correo Electrónico</label>
+                                <input type="email" name="email" id="email" class="form-input-pastel input-peach" required placeholder="tu@correo.com">
+                            </div>
+                            <div class="col-12 text-start">
+                                <label for="message" class="form-label-custom"><i class="bi bi-chat-right-text-fill me-1 text-pink"></i> Mensaje</label>
+                                <textarea name="message" id="message" rows="4" class="form-input-pastel input-pink" required placeholder="Hola! Me gustaría crear..."></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn-interactive-submit">
+                                <span class="btn-text-content"><i class="bi bi-send-fill me-2"></i>Enviar Mensaje</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Con separación masiva, colores pastel sólidos y notarización limpia -->
+    <footer class="footer-block mt-5 shadow-sm text-center">
+        <div class="container container-centered">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+                <span class="fw-bold"><i class="bi bi-code-slash text-lavender me-2"></i>tu_usuario.dev</span>
+                <p class="mb-0 small text-muted-custom">Hecho con amor, Bootstrap 5 y lógica avanzada • © 2026</p>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn-theme-circle text-decoration-none"><i class="bi bi-arrow-up-short fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://jsdelivr.net"></script>
+    <script src="app.js"></script>
+</body>
