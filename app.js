@@ -23,48 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselContainer = document.getElementById('carousel-projects-container');
     const themeToggle = document.getElementById('theme-toggle');
 
-    // Inyección de proyectos en el carrusel con la nueva Grid Asimétrica
-    function renderizarCarrusel() {
-        carouselContainer.innerHTML = '';
-
-        PROYECTOS.forEach((proy, index) => {
-            const isActive = index === 0 ? 'active' : '';
-            const tagsHTML = proy.tecnologias.map(t => `<span class="tech-tag-sm">${t}</span>`).join('');
-            const linkDemo = proy.demo ? `<a href="${proy.demo}" target="_blank" class="link-project me-3"><i class="bi bi-link-45deg"></i> Demo</a>` : '';
-            
-            const fallbackImg = `https://placeholder.com{encodeURIComponent(proy.titulo)}`;
-
-            const slideHTML = `
-                <div class="carousel-item ${isActive}" data-bs-interval="4000">
-                    <article class="project-card-flat shadow-sm">
-                        <div class="project-card-row">
-                            <!-- Lado izquierdo: Imagen -->
-                            <div class="img-wrapper-split">
-                                <img src="${proy.imagen}" alt="${proy.titulo}" onerror="this.src='${fallbackImg}'" loading="lazy">
-                            </div>
-                            <!-- Lado derecho: Información del desarrollo -->
-                            <div class="content-wrapper-split p-4 d-flex flex-column justify-content-between">
-                                <div>
-                                    <h3 class="h5 fw-bold mb-2">${proy.titulo}</h3>
-                                    <p class="text-muted-custom small mb-3">${proy.descripcion}</p>
-                                </div>
-                                <div>
-                                    <div class="d-flex flex-wrap gap-1 mb-3">${tagsHTML}</div>
-                                    <div class="pt-3 border-top-custom">
-                                        ${linkDemo}
-                                        <a href="${proy.codigo}" target="_blank" class="link-project">
-                                            <i class="bi bi-github"></i> Código ↗
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            `;
-            carouselContainer.insertAdjacentHTML('beforeend', slideHTML);
-        });
-    }
 
     // Control de Persistencia del Tema Fijo Derecho
     const temaGuardado = localStorage.getItem('theme') || 'theme-light';
@@ -93,4 +51,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderizarCarrusel();
+});
+const formularioContacto = document.getElementById('interactive-form');
+
+formularioContacto.addEventListener('submit', (evento) => {
+    evento.preventDefault(); // Evita que la página se recargue
+
+    // Obtener los valores que escribió el usuario
+    const nombre = document.getElementById('name').value;
+    const correoUsuario = document.getElementById('email').value;
+    const mensaje = document.getElementById('message').value;
+
+    // Configurar los datos del correo
+    const correoDestino = "galvancristinar@gmail.com";
+    const asunto = encodeURIComponent(`Contacto Portafolio - ${nombre}`);
+    
+    // Estructurar el cuerpo del mensaje
+    const cuerpo = encodeURIComponent(
+        `Nombre: ${nombre}\n` +
+        `Correo de contacto: ${correoUsuario}\n\n` +
+        `Mensaje:\n${mensaje}`
+    );
+
+    // Abrir la aplicación de correo del usuario con los datos listos
+    window.location.href = `mailto:${correoDestino}?subject=${asunto}&body=${cuerpo}`;
 });

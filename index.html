@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristina GR | Portafolio</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://jsdelivr.net" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </head>
 <body class="theme-light">
 
@@ -26,7 +28,7 @@
             <a href="#habilidades" class="nav-pastel-link"><i class="bi bi-cpu-fill"></i> <span class="d-none d-sm-inline">Skills</span></a>
             <a href="#proyectos" class="nav-pastel-link"><i class="bi bi-code-slash"></i> <span class="d-none d-sm-inline">Proyectos</span></a>
             <a href="#contacto" class="nav-pastel-link"><i class="bi bi-chat-heart-fill"></i> <span class="d-none d-sm-inline">Contacto</span></a>
-            <a href="docs/mi-cv.pdf" download="CV_CristinaGalvan.pdf" class="nav-pastel-link link-cv-highlight"><i class="bi bi-paperclip"></i> <span class="d-none d-sm-inline">CV</span></a>
+            <a href="Cristina Galván Ramírez.pdf" download="CristinaGalvan_CV.pdf" class="nav-pastel-link link-cv-highlight"><i class="bi bi-paperclip"></i> <span class="d-none d-sm-inline">CV</span></a>
         </nav>
     </div>
 
@@ -36,14 +38,12 @@
         <!-- SECCIÓN 1: Perfil e Intro -->
         <header id="sobre-mi" class="text-center mb-5 pt-4">
             <div class="avatar-wrapper mx-auto mb-4">
-                <img src="img/tu-foto.jpg" alt="Cristina Galván Ramírez" class="profile-avatar" onerror="this.src='https://placeholder.com✨'">
+                <img src="/docs/fotoperfil.png" alt="Cristina Galván Ramírez" class="profile-avatar" onerror="this.src='https://placeholder.com✨'">
             </div>
             <h1 class="display-6 fw-bold mb-2">¡Hola, soy Desarrolladora Java Full Stack Junior <span class="highlight-text">Cristina Galván Ramírez</span>!</h1>
             <p class="lead text-muted-custom max-w-sm mx-auto mb-4">
-Como programadora junior Java Fullstack, me apasiona aprender constantemente,
- resolver problemas y participar en proyectos donde puedo aportar creatividad, 
- compromiso y atención al detalle. Ayudo a crear soluciones digitales funcionales y fáciles de usar, 
- combinando desarrollo web y trabajo en equipo para transformar ideas en experiencias útiles.       
+Como programadora junior Java Fullstack, me apasiona aprender constantemente, resolver problemas y participar en proyectos donde puedo aportar creatividad, 
+ compromiso y atención al detalle. Ayudo a crear soluciones digitales funcionales y fáciles de usar, combinando desarrollo web y trabajo en equipo para transformar ideas en experiencias útiles.       
      </p>
             
             <div class="d-flex justify-content-center flex-wrap gap-2 mb-3">
@@ -83,10 +83,10 @@ Como programadora junior Java Fullstack, me apasiona aprender constantemente,
         <section id="habilidades" class="mb-5 text-center">
             <h2 class="h5 fw-bold mb-4"><i class="bi bi-patch-check-fill text-lavender me-2"></i>Stack Tecnológico</h2>
             <div class="d-flex flex-wrap justify-content-center gap-2">
-                <span class="skill-bubble bg-lavender-pill"><i class="bi bi-browser-chrome me-1"></i> React.js</span>
+                <span class="skill-bubble bg-lavender-pill"><i class="bi bi-browser-chrome me-1"></i> Java</span>
                 <span class="skill-bubble bg-pink-pill"><i class="bi bi-filetype-js me-1"></i> JavaScript</span>
                 <span class="skill-bubble bg-peach-pill"><i class="bi bi-nut me-1"></i> HTML/CSS</span>
-                <span class="skill-bubble bg-mint-pill"><i class="bi bi-database me-1"></i> Java</span>
+                <span class="skill-bubble bg-mint-pill"><i class="bi bi-database me-1"></i> MySQL</span>
                 <span class="skill-bubble bg-lavender-pill"><i class="bi bi-git me-1"></i> Git & GitHub</span>
             </div>
         </section>
@@ -97,18 +97,63 @@ Como programadora junior Java Fullstack, me apasiona aprender constantemente,
         <section id="proyectos" class="mb-5 text-center">
             <h2 class="h4 fw-bold mb-2"><i class="bi bi-stars text-lavender me-2"></i>Proyectos Destacados</h2>
             <p class="text-muted-custom small mb-4">Explora mis últimos repositorios y desarrollos de software.</p>
+            <br>
+            <br>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+
+      <img src="/docs/logo1.png" class="d-block w-100" alt="https://github.com/katiamlopez/Caliope-MVP">
+     <!-- <a href="https://github.com/katiamlopez/Caliope-MVP" target="_blank" class="btn btn-primary">Ver Proyecto</a> -->
+      <br>
+        <div class="card" style="width: center;">
+        <div class="card-body">
+        <h5 class="card-title">Caliope</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Red Social</h6>
+        <p class="card-text">Desarrollé una red social para escritores y lectores para su interacción. 
+Participé bajo la metodología Scrum, obteniendo una excelente organización. 
+Diseñé la página de inicio con lenguaje Java, herramientas como GitHub, HTML, CSS, Bootstrap.
+Contribuí en el backend para la gestión de usuarios, grupos y contenido, implementando bases de datos SQL.</p>
+        <a href="#" target="_blank" class="btn btn-primary">Página web</a>
+        <a href="https://github.com/katiamlopez/Caliope-MVP" target="_blank" class="btn btn-primary">Repositorio</a>  
+      </div>
+     </div>
+    </div>
+        <div class="carousel-item active" data-bs-interval="3000">
+      <img src="/docs/Hackathon 2.png" class="d-block w-100" alt="proyecto 2">
+      <br>
+      <div class="card" style="width: center;">
+        <div class="card-body">
+        <h5 class="card-title">Java-Swifters</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Agenda Telefónica</h6>
+        <p class="card-text">Desarrollé una agenda telefónica para gestionar contactos y llamadas. 
+Participé bajo la metodología Scrum, obteniendo una excelente organización. 
+Diseñé la interfaz de usuario con lenguaje Java, herramientas como GitHub.
+Contribuí en el backend para la gestión de contactos, registrados, nuevos, eliminados y modificados.</p>
+        <a href="#" target="_blank" class="btn btn-primary">Página web</a>
+        <a href="https://github.com/alejandroblancojmz-droid/Hackathon-2" target="_blank" class="btn btn-primary">Repositorio</a>  
+        </div>
+       </div>
+    </div>
+        <div class="carousel-item active" data-bs-interval="3000">
+      <img src="/docs/hackathon1.png" class="d-block w-100" alt="proyecto 3">
+      <br>
+      <div class="card" style="width: center;">
+        <div class="card-body">
+        <h5 class="card-title">World Cup Store</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Tienda Deportiva</h6>
+        <p class="card-text">Desarrollé una tienda de productos del Mundial para gestionar la venta de artículos relacionados con el torneo. 
+Participé bajo la metodología Scrum, obteniendo una excelente organización. 
+Diseñé la interfaz de usuario con lenguaje JavaScript, herramientas como GitHub, HTML, CSS, Bootstrap.
+Contribuí en el backend para la gestión de productos, pedidos y usuarios, implementando bases de datos SQL.</p>
+        <a href="https://world-cup-store-two.vercel.app/" target="_blank" class="btn btn-primary">Página web</a>
+        <a href="https://github.com/mafernandarodrigueztdev-byte/world-cup-store" target="_blank" class="btn btn-primary">Repositorio</a>  
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
             
-            <div id="proyectosCarousel" class="carousel slide pb-4" data-bs-ride="carousel">
-                <div class="carousel-inner" id="carousel-projects-container">
-                    <!-- JS inyectará las tarjetas automáticamente aquí con el nuevo estilo asimétrico -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#proyectosCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#proyectosCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
-                </button>
-            </div>
         </section>
 
         <hr class="divider my-5">
@@ -117,12 +162,17 @@ Como programadora junior Java Fullstack, me apasiona aprender constantemente,
         <section id="contacto" class="mb-4">
             <div class="text-center mb-4">
                 <h2 class="h4 fw-bold mb-2"><i class="bi bi-envelope-heart-fill text-pink me-2"></i>¿Trabajamos juntos?</h2>
-                <p class="text-muted-custom small max-w-sm mx-auto">Escríbeme un mensaje directo. Los campos reaccionan de forma elástica.</p>
+                <p class="text-muted-custom small max-w-sm mx-auto">Escríbeme un mensaje directo.                    
+                    <br>¡Estoy emocionada por conectar contigo y crear algo increíble juntos!</p>
+                <br>
+                <p class="text-muted-custom small max-w-sm mx-auto"> Correo profesional: galvancristinar@gmail.com 
+                    <br>Celular: 7225193113</p>
             </div>
             
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9">
                     <form id="interactive-form" action="https://formspree.io" method="POST" class="contact-bento-grid p-4 shadow-sm">
+                        <form id="interactive-form" class="contact-bento-grid p-4 shadow-sm">
                         <div class="row g-3">
                             <div class="col-12 col-sm-6 text-start">
                                 <label for="name" class="form-label-custom"><i class="bi bi-person-fill me-1 text-lavender"></i> Tu Nombre</label>
@@ -153,8 +203,8 @@ Como programadora junior Java Fullstack, me apasiona aprender constantemente,
     <footer class="footer-block mt-5 shadow-sm text-center">
         <div class="container container-centered">
             <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
-                <span class="fw-bold"><i class="bi bi-code-slash text-lavender me-2"></i>tu_usuario.dev</span>
-                <p class="mb-0 small text-muted-custom">Hecho con amor, Bootstrap 5 y lógica avanzada • © 2026</p>
+                <span class="fw-bold"><i class="bi bi-code-slash text-lavender me-2"></i>Cristina@GR</span>
+                <p class="mb-0 small text-muted-custom">Hecho con amor 💜, profesionalismo, entusiasmo • © 2026</p>
                 <div class="d-flex gap-2">
                     <a href="#" class="btn-theme-circle text-decoration-none"><i class="bi bi-arrow-up-short fs-4"></i></a>
                 </div>
